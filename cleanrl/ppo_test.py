@@ -227,10 +227,10 @@ if __name__ == "__main__":
             # ALGO LOGIC: action logic
             # TODO: 调用 agent.get_action_and_value() 获取当前步的动作和对数概率
             # 提示: action, logprob, _, value = agent.get_action_and_value(next_obs)
-            action, logprob, _, value = ###
+            action, logprob, _, value = agent.get_action_and_value(next_obs)
             # TODO: 将 value 存储到 values 缓冲区中
             with torch.no_grad():
-                values[step] = ###
+                values[step] = value.flatten()
             actions[step] = action
             logprobs[step] = logprob
 
